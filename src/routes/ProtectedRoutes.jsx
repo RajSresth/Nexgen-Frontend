@@ -1,11 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Outlet, Naviagate } from "react-router-dom";
-import { PATHS } from "./endpoints";
+import { Outlet, Navigate } from "react-router-dom";
+import { PATHS } from "./paths";
 
 const ProtectedRoutes = () => {
   const { isAuthenticated } = useSelector((state) => state.auth);
-  return isAuthenticated ? <Outlet /> : <Naviagate to={PATHS.LOGIN} />;
+  return isAuthenticated ? <Outlet /> : <Navigate to={PATHS.LOGIN} replace />;
 };
 
 export default ProtectedRoutes;

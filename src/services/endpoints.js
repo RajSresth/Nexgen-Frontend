@@ -2,14 +2,14 @@
 // Not to be confused with routes/endpoints.js, which holds frontend
 // route paths (PATHS) for React Router. These are two different things.
 
-export const ENDPOINTS = {
+const ENDPOINTS = {
   AUTH: {
-    REGISTER: "/register",
-    LOGIN: "/login",
-    VERIFY_EMAIL: (token) => `/verify-email/${token}`,
-    RESEND_VERIFICATION_EMAIL: "/resend-verification-email",
-    REFRESH_TOKEN: "/refresh-token",
-    LOGOUT: "/logout",
+    REGISTER: "auth/register",
+    LOGIN: "auth/login",
+    VERIFY_EMAIL: (token) => `auth/verify-email/${token}`,
+    RESEND_VERIFICATION_EMAIL: "auth/resend-verification-email",
+    REFRESH_TOKEN: "auth/refresh-token",
+    LOGOUT: "auth/logout",
   },
 
   PRODUCTS: {
@@ -33,3 +33,4 @@ export const ENDPOINTS = {
     UPDATE: "/profile",
   },
 };
+export default ENDPOINTS;

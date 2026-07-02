@@ -2,7 +2,7 @@ import axios from "axios";
 import store from "../redux/store";
 import { setAccessToken, logout } from "../redux/slices/authSlice";
 
-const BASE_URL = import.meta.env.VITE_API_BASE_URL + "/api/v1/";
+const BASE_URL = import.meta.env.VITE_API_BASE_URL + "/api/v1";
 
 // axios instance
 const api = axios.create({
